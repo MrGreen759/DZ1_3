@@ -10,7 +10,7 @@ fun main() {
     timeAgo = 122 // 2 минуты
     println("Пользователь был в системе ${forOutput(timeAgo)}")
 
-    timeAgo = 245 // 4 минуты
+    timeAgo = 235 // 4 минуты
     println("Пользователь был в системе ${forOutput(timeAgo)}")
 
     timeAgo = 665 // 11 минут
@@ -35,6 +35,7 @@ fun main() {
     println("Пользователь был в системе ${forOutput(timeAgo)}")
 }
 
+// возвращаем сформированную фразу
 fun forOutput(sec:Int): String {
     val MINUTE = 60
     val HOUR = 3600
@@ -53,6 +54,7 @@ fun forOutput(sec:Int): String {
     }
 }
 
+// склоняем минуты, возвращаем готовую фразу
 fun minutes(sec: Int): String {
     var min: Int = (Math.round(sec/60.0)).toInt()
     var word: String
@@ -65,6 +67,7 @@ fun minutes(sec: Int): String {
     return min.toString() + word + " назад."
 }
 
+// склоняем часы, возвращаем готовую фразу
 fun hours(sec: Int): String {
     var hours: Int = (Math.round(sec/3600.0)).toInt()
     var word: String
